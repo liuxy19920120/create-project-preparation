@@ -1,0 +1,51 @@
+git status  查看文件的状态
+	 Untracked files:  未跟踪 没有提到缓存区
+	 changes to be committed 已缓存 提交到了缓存区
+		new file 首次提交到缓存区
+		modified 被改进的，在缓存区已经有了 在工作又修改了
+	Changes not staged for commit  更改了工作区的文件，为提交到缓存区
+
+
+每次commit一次，都会有一个commit_id
+
+
+git log 当初提交的日志，不包含书撤销的提交
+git reflog 所有的提交，包含撤销的提交
+
+时间穿梭（旅行）
+
+	git checkout -- file   丢弃工作区的修改 从缓存区到工作区
+	git reset -- file 从版本库到缓存区
+	git checkout HEAD <file>  从版本库中拉回到 缓存区和工作区 最近的一次提交
+
+
+	任意的到某一次提交上上 git reset --hard HEAD^ / commit_id
+
+
+
+HEAD 指向最新提交的一次
+
+分支
+	git branch 查看分支
+	git branch -v 查看分支会显示最新一次提交到额commit_id和日志
+	git branch -d test 删除test分支
+	git branch test 创建test分支
+	git checkout test 切换到test分支
+	git checkout -b miaov 创建miaov分支并切换到miaov分支
+
+合并分支
+	git merge test# 将test分支合并到当前分支
+
+
+vim编辑
+	i 进行编辑的
+	按esc 按冒号: 输入wq 保存退出
+
+http://git.oschina.net/progit/
+git pro 
+
+SVN
+	checkout 拉取远程的仓库的文件
+
+	git updata 拉取远程文件
+	git commit 提交本地文件到远程

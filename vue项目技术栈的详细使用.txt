@@ -1,0 +1,72 @@
+路由
+	前端路由，归前端控制的
+	vue-router 接收请求，分发内容
+单页应用
+	一个网站只有一个页面  通过一些路由库来配置路径对应的组件，当访问到这个路径的时候，就会渲染对应的组件
+
+	http://easy-mock.com/workbench
+	http://easy-mock.com/dashboard
+
+	{
+		workbench：a组件
+		dashboard： b组件
+	}
+
+只需要怎么配置
+	路径
+	组件
+
+	一个路径对应一个组件 主要配置映射关系
+	http://easy-mock.com /workbench
+
+	/ 根路径
+	/workbench 路径
+	/workbench/a/b  嵌套路径
+
+使用vue-router
+-----------------
+npm i vue-router --save
+
+2. 引入vue-router
+	import VueRouter from 'vue-router'
+3. 把vue-router作为vue的插件
+	Vue.use(VueRouter)
+4. 开始实例化路由
+	let router = new VueRouter({
+		routes: [
+			{
+				path: 路径
+				component: 对应的组件
+			},
+			{
+				path: 路径
+				component: 对应的组件
+			}
+		]
+	})
+
+5. 需要把router注入到根实例中
+	new Vue({
+		...
+		// router: router
+		router
+	})
+
+6. 在app.vue中写上一对标签，是vue-router提供的
+	<router-view></router-view>
+	用来告诉vue，路径匹配到的组件渲染在这个位置，路径匹配到的组件就会替换router-view这一对标签
+
+	$route 要知道路径发生了变化，监控$route
+
+全局
+	router.beforeEach((to, from, next) =>{
+
+	})
+路由
+	beforeEnter(to, from, next){
+
+	}
+组件
+	beforeRouteEnter(to, from, next){
+
+	}

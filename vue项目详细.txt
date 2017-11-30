@@ -1,0 +1,70 @@
+做项目
+
+1. 布局完整的静态页面
+
+2. 技术选型
+	前端：
+		vue的全家桶
+			vue.js       核心源码
+			vue-router   单页应用的路由
+			vuex         状态管理
+			axios		 和服务器通信
+	后端：
+		nodejs + 本地json文件
+
+3. 接口说明
+	get http://locahost:3100/api/list
+		作用： 请求商品列表的数据
+		请求参数： 无
+		响应数据：
+			json格式
+
+	post http://locahost:3100/api/setShopCarList
+		作用： 把商品添加到购物车
+		请求参数： 商品完整信息
+			{
+				carList:[]
+			}
+		响应的数据
+			1种情况：{message:'成功了'}
+			2种情况：返回的是加入购物车这个商品的数据
+			3种情况：返回全部的已加入购物车的数据   *
+
+	get http://locahost:3100/api/getShopCarList
+		作用： 获取小购物车的商品
+		请求参数： 无
+		响应的数据： 返回全部的已加入购物车的数据 
+
+	post http://locahost:3100/api/removeCarShopById
+		作用： 删除小购物车的商品
+		请求参数： {
+			removeId： 删除商品的id
+		}
+		响应的数据： 删除后小购物车所有的数据
+
+4. 搭建前端项目
+	vue-cli搭建项目 不是vue项目必选vue-cli
+
+	安装模块
+		npm i vuex --save
+		npm i axios --save
+
+5. 目录规划
+	src目录下
+		store目录----整个应用的状态管理
+
+6. 写项目
+
+
+7- 任务
+	计算 小购物车商品的总价和总数量
+	删除此商品
+		post http://locahost:3100/api/removeCarShopById
+		作用： 删除小购物车的商品
+		请求参数： {
+			removeId： 删除商品的id
+		}
+		响应的数据： 删除后小购物车所有的数据
+
+
+

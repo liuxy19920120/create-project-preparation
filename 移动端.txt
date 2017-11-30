@@ -1,0 +1,10 @@
+zepto.js  和jq的api一样
+
+swiper.js     http://www.swiper.com.cn/ 
+
+swiper视频 http://2017.miaov.com/study/show/video?vid=1280
+
+better-scroll 滑屏  https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/options-advanced.html
+视频教程
+	http://2017.miaov.com/v_show/454
+

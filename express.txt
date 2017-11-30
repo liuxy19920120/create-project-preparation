@@ -1,0 +1,47 @@
+package.json字段
+dependencies 依赖模块
+
+安装模块使用 --save 自定把依赖的模块名称和版本添加在package.json中
+
+在最后上线打包的时候，会安装dependencies这里面依赖的模块
+devDependencies中的模块只是在开发环境使用的
+
+--save-dev 安装在devDependencies的依赖中，只在开发环境使用，一般放的是工具模块
+
+scripts npm的命令脚本
+
+定义格式： "key": "运行的js文件"
+
+启动npm的命令脚本 
+npm run [key] 
+
+express
+---------------------------------------
+1. 路由
+2. 中间件  -- http://www.expressjs.com.cn/guide/using-middleware.html
+3. 静态文件设置   --- http://www.expressjs.com.cn/starter/static-files.html
+4. 服务端的模板引擎
+5. get和post数据请求处理
+
+
+
+1. 路由
+-------------------------
+
+app.method(path,callback)
+
+method: get post
+
+app.get('/landeanfen',()=>{
+	console.log(123)
+})
+
+// app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时要执行的函数。
+
+{
+	'/landeanfen': [fn,fn]
+}
+
+
+网页地址
+http://www.cnblogs.com/landeanfen

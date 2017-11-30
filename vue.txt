@@ -1,0 +1,84 @@
+vue 项目的搭建
+
+vue-cli脚手架
+
+vuex 状态管理
+
+vue-router 前端路由，负责页面切换
+
+vue-cli脚手架
+--------------------------
+帮助快速的搭建项目目录
+单元测试
+开发环境编写和测试项目
+帮助打包项目
+项目部署到服务器
+
+使用前要必须安装
+npm i vue-cli -g
+
+装置后可以使用命令 vue
+
+安装项目目录
+vue init webpack 本地的目录
+
+进到工程目录中，安装模块
+npm i
+
+项目目录介绍
+------------------------------
+build ------ webpack的配置目录
+config ----- 开发环境和生成环境的配置
+src    -----  写vue项目的源文件，单文件组件和vue周边工具配置
+
+static ----- 静态目录（图片 js css） 不归webpack管理
+
+.babelrc ---- babel转换器的配置文件
+.eslintigore ---- 排除检查的目录文件
+.eslintrc --- 配置检查规则，可以禁用某个规则  '规则名':0
+
+
+ESlint 代码风格检查
+--------------------------------
+
+src目录下
+--------------
+assets   静态资源的，归webpack管理
+components 放公共的组件
+router 路由配置
+
+App.vue  组件的总入口
+mian.js  js的入口
+
+引入模块
+------------------
+import 变量名 from '模块路径'
+
+模块路径:
+	是在node_modules下的模块 直接写模块名
+	自己定义的文件 要写相对路径（????）
+
+单文件组件
+------------------
+一个文件就是一个组件
+组件包含：
+	1. template 组件的模板   *
+	2. script   组件的交互
+	3. style    组件的样式
+
+组件中使用样式
+---------------------
+
+每一个单独的组件使用独立的样式，写在单文件的style中
+
+统一引入css
+vuex
+---------------------
+Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式
+官网：https://vuex.vuejs.org/zh-cn/intro.html
+
+安装vuex
+npm i vuex
+
+安装vue-devtools
+https://github.com/vuejs/vue-devtools
